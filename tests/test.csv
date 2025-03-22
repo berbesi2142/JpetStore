@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1741136263590,1228,HTTP Request,200,OK,Users 1-1,text,true,,4757,119,2,2,https://www.blazedemo.com/,1142,0,159
+1741136264592,699,HTTP Request,200,OK,Users 1-2,text,true,,4757,119,1,1,https://www.blazedemo.com/,622,0,179
+1741136265588,941,HTTP Request,200,OK,Users 1-3,text,true,,4757,119,1,1,https://www.blazedemo.com/,939,0,170
+1741136266587,1093,HTTP Request,200,OK,Users 1-4,text,true,,4757,119,2,2,https://www.blazedemo.com/,1089,0,153
+1741136267587,434,HTTP Request,200,OK,Users 1-5,text,true,,4757,119,1,1,https://www.blazedemo.com/,431,0,168
+1741136268587,761,HTTP Request,200,OK,Users 1-6,text,true,,4757,119,1,1,https://www.blazedemo.com/,751,0,178
+1741136269587,501,HTTP Request,200,OK,Users 1-7,text,true,,4757,119,1,1,https://www.blazedemo.com/,498,0,173
+1741136270589,1182,HTTP Request,200,OK,Users 1-8,text,true,,4757,119,2,2,https://www.blazedemo.com/,1180,0,167
+1741136271592,1389,HTTP Request,200,OK,Users 1-9,text,true,,4757,119,2,2,https://www.blazedemo.com/,1387,0,457
+1741136272590,464,HTTP Request,200,OK,Users 1-10,text,true,,4757,119,1,1,https://www.blazedemo.com/,460,0,167

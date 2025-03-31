@@ -5,6 +5,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -24,7 +26,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Scenario 1 - Search" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Scenario 1 - Search">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -2601,7 +2603,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="01_OpenURL" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -2817,7 +2819,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="02_01_Open Url" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -3212,7 +3214,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="03_01_Open URL" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -4044,7 +4046,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="04_01_OpenURL" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -5168,7 +5170,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -5298,13 +5300,13 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Scenario 1 - Search - Open Model Thread Group">
+      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Scenario 1 - Search - Open Model Thread Group" enabled="false">
         <stringProp name="OpenModelThreadGroup.schedule">pause(1 sec) rate(10/sec ) random_arrivals(10 sec) pause(1 sec)</stringProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="OpenModelThreadGroupController"/>
       </OpenModelThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="01_OpenURL" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -5503,12 +5505,12 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Scenario 2 - View Details - Open Model Thread Group" enabled="true">
+      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Scenario 2 - View Details - Open Model Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="OpenModelThreadGroupController"/>
       </OpenModelThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="02_01_Open Url" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -5886,12 +5888,12 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Scenario 3 - Add to Cart - Open Model Thread Group" enabled="true">
+      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Scenario 3 - Add to Cart - Open Model Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="OpenModelThreadGroupController"/>
       </OpenModelThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="03_01_Open URL" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -6706,12 +6708,12 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Scenario 4 - Checkout - Open Model Thread Group" enabled="true">
+      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Scenario 4 - Checkout - Open Model Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="OpenModelThreadGroupController"/>
       </OpenModelThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="04_01_OpenURL" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -7835,7 +7837,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="Scenario 1 - Search - bzm - Concurrency Thread Group">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="Scenario 1 - Search - bzm - Concurrency Thread Group" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">100</stringProp>
@@ -7848,7 +7850,7 @@
         <stringProp name="Unit">M</stringProp>
       </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="01_OpenURL" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -8047,7 +8049,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="Scenario 2 - View Details - Concurrency Thread Group" enabled="true">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="Scenario 2 - View Details - Concurrency Thread Group" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">12</stringProp>
@@ -8060,7 +8062,7 @@
         <stringProp name="Unit">M</stringProp>
       </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="02_01_Open Url" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -8438,7 +8440,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="Scenario 3 - Add to Cart - bzm - Concurrency Thread Group">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="Scenario 3 - Add to Cart - bzm - Concurrency Thread Group" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">12</stringProp>
@@ -8451,7 +8453,7 @@
         <stringProp name="Unit">M</stringProp>
       </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="03_01_Open URL" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -9266,7 +9268,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="Scenario 4 - Checkout - bzm - Concurrency Thread Group">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="Scenario 4 - Checkout - bzm - Concurrency Thread Group" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">12</stringProp>
@@ -9279,7 +9281,7 @@
         <stringProp name="Unit">M</stringProp>
       </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="04_01_OpenURL" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -10403,7 +10405,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Scenario 1 - Search - p@gc - Stepping Thread Group">
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Scenario 1 - Search - p@gc - Stepping Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="ThreadGroup.num_threads">100</stringProp>
         <stringProp name="Threads initial delay">2</stringProp>
@@ -10420,7 +10422,7 @@
         </elementProp>
       </kg.apc.jmeter.threads.SteppingThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="01_OpenURL" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -10619,7 +10621,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Scenario 2 - View Details - jp@gc - Stepping Thread Group">
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Scenario 2 - View Details - jp@gc - Stepping Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="ThreadGroup.num_threads">100</stringProp>
         <stringProp name="Threads initial delay">0</stringProp>
@@ -10636,7 +10638,7 @@
         </elementProp>
       </kg.apc.jmeter.threads.SteppingThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="02_01_Open Url" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -11014,7 +11016,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Scenario 3 - Add to Cart - jp@gc - Stepping Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Scenario 3 - Add to Cart - jp@gc - Stepping Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="ThreadGroup.num_threads">100</stringProp>
         <stringProp name="Threads initial delay">0</stringProp>
@@ -11031,7 +11033,7 @@
         </elementProp>
       </kg.apc.jmeter.threads.SteppingThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="03_01_Open URL" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -11846,7 +11848,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Scenario 4 - Checkout - jp@gc - Stepping Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Scenario 4 - Checkout - jp@gc - Stepping Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="ThreadGroup.num_threads">100</stringProp>
         <stringProp name="Threads initial delay">0</stringProp>
@@ -11863,7 +11865,7 @@
         </elementProp>
       </kg.apc.jmeter.threads.SteppingThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="04_01_OpenURL" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -12987,7 +12989,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="Scenario 1 - Search - bzm - Arrivals Thread Group">
+      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="Scenario 1 - Search - bzm - Arrivals Thread Group" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">24</stringProp>
@@ -13200,7 +13202,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="Scenario 2 - View Details - bzm - Arrivals Thread Group">
+      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="Scenario 2 - View Details - bzm - Arrivals Thread Group" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">12</stringProp>
@@ -13592,7 +13594,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="Scenario 3 - Add to Cart - bzm - Arrivals Thread Group">
+      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="Scenario 3 - Add to Cart - bzm - Arrivals Thread Group" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">12</stringProp>
@@ -14421,7 +14423,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="Scenario 4 - Checkout - bzm - Arrivals Thread Group">
+      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="Scenario 4 - Checkout - bzm - Arrivals Thread Group" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">12</stringProp>

@@ -1,0 +1,5 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1743386748014,772,01_OpenURL,200,,Scenario 1 - Search 1-1,text,true,,5664,525,1,1,https://petstore.octoperf.com/actions/Catalog.action,771,0,620
+1743386747974,772,01_OpenURL,200,"Number of samples in transaction : 1, number of failing samples : 0",Scenario 1 - Search 1-1,,true,,5664,525,1,1,null,771,42,620
+1743386748879,150,02_Search,200,,Scenario 1 - Search 1-1,text,true,,4081,923,1,1,https://petstore.octoperf.com/actions/Catalog.action,150,0,0
+1743386748788,150,02_Search,200,"Number of samples in transaction : 1, number of failing samples : 0",Scenario 1 - Search 1-1,,true,,4081,923,1,1,null,150,91,0
